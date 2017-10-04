@@ -2,7 +2,7 @@
 file_extensions:
   - .IFJcode17
   - .IFJcode2017
-scope: source.example-c
+scope: source
 first_line_match: '\.IFJcode17'
 variables:
   identifier: '[\w_\-\$&%*]+'
@@ -22,30 +22,32 @@ contexts:
   labels:
     - match: '(?i)(call|label|jump|jumpifeq|jumpifneq|jumpifeqs|jumpifneqs)(\s+)({{identifier}})'
       captures: 
-        1: keyword.control.example-c
-        3: support.function.example-c
+        1: keyword.control
+        3: support.function
 
   frames:
     - match: '\b[LGT]F@'
-      scope: entity.name.example-c
+      scope: entity.name
 
   variables:
     - match: '(?<=[LGT]F@){{identifier}}'
-      scope: variable.parameter.example-c
+      scope: variable.parameter
 
   keywords:
     - match: '(?i)\b(move|createframe|pushframe|popframe|defvar|call|return|pushs|pops|clears|add|sub|mul|div|adds|subs|muls|divs|lt|gt|eq|lts|gts|eqs|and|or|not|ands|ors|nots|int2float|float2int|float2r2eint|float2roint|int2char|str2int|int2floats|float2ints|float2r2eints|float2roints|int2chars|str2ints|read|write|concat|strlen|getchar|setchar|type|label|jump|jumpifeq|jumpifneq|jumpifeqs|jumpifneqs|break|dprint)\b'
-      scope: keyword.control.example-c
+      scope: keyword.control
 
   numbers:
     - match: '\b(float|int)(@)(-?[0-9.]+)\b'
       captures: 
         1: constant.numeric
-        3: constant.numeric.example-c
+        3: constant.numeric
 
   strings:
-    - match: '(?i)string@.*'
-      scope: punctuation.definition.string.begin.example-c
+    - match: '(?i)(string)@(.*)'
+      captures: 
+        1: punctuation.definition.string.begin
+        3: punctuation.definition.string.end
       push: inside_string
 
   inside_string:
@@ -59,8 +61,8 @@ contexts:
 
   comments:
     - match: '#'
-      scope: punctuation.definition.comment.example-c
+      scope: punctuation.definition.comment
       push:
-        - meta_scope: comment.line.double-slash.example-c
+        - meta_scope: comment.line.double-slash
         - match: $\n?
           pop: true
