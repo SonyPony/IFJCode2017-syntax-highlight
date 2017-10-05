@@ -12,4 +12,10 @@ OS X: `~/Library/Application Support/Subime Text 3/Packages/User`
 
 Windows: `%APPDATA%\Sublime Text 3`
 
-Feel free to report bugs or wanted features.
+## Authors
+[@SonyPony](https://github.com/SonyPony) - syntax hightlight
+
+[@thejoeejoee](https://github.com/thejoeejoee) - first idea, Package Control integration
+
+**Please feel free to report bugs or wanted features.**
+
