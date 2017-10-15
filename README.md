@@ -13,7 +13,7 @@ Linux: `~/.config/sublime-text-3/Packages/User`
 
 OS X: `~/Library/Application Support/Subime Text 3/Packages/User`
 
-Windows: `%APPDATA%\Sublime Text 3`
+Windows: `%APPDATA%\Sublime Text 3\Packages\User`
 
 ## Authors
 [@SonyPony](https://github.com/SonyPony) - syntax hightlight
