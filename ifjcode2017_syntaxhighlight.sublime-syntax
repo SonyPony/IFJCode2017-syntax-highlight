@@ -1,9 +1,7 @@
 %YAML 1.2
-file_extensions:
-  - .IFJcode17
-  - .IFJcode2017
+file_extensions: [IFJcode17, IFJcode2017]
 scope: source
-first_line_match: '\.IFJcode17'
+first_line_match: .IFJcode17
 variables:
   identifier: '[\w_\-\$&%*]+'
 
@@ -13,6 +11,7 @@ contexts:
 
   main:
     - include: numbers
+    - include: booleans
     - include: strings
     - include: frames
     - include: variables
@@ -39,6 +38,12 @@ contexts:
 
   numbers:
     - match: '\b(float|int)(@)(-?[0-9.]+)\b'
+      captures: 
+        1: constant.numeric
+        3: constant.numeric
+
+  booleans:
+    - match: '\b(bool)(@)((?i)(true|false))\b'
       captures: 
         1: constant.numeric
         3: constant.numeric
