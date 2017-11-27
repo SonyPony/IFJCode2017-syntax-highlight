@@ -42,7 +42,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(move|createframe|pushframe|popframe|defvar|call|return|pushs|pops|clears|add|sub|mul|div|adds|subs|muls|divs|lt|gt|eq|lts|gts|eqs|and|or|not|ands|ors|nots|int2float|float2int|float2r2eint|float2roint|int2char|str2int|int2floats|float2ints|float2r2eints|float2roints|int2chars|str2ints|read|write|concat|strlen|getchar|setchar|type|label|jump|jumpifeq|jumpifneq|jumpifeqs|jumpifneqs|break|dprint)\b</string>
+			<string>(?i)\b(move|createframe|pushframe|popframe|defvar|call|return|pushs|pops|clears|add|sub|mul|div|adds|subs|muls|divs|lt|gt|eq|lts|gts|eqs|and|or|not|ands|ors|nots|int2float|float2int|float2r2eint|float2roint|int2char|stri2int|int2floats|float2ints|float2r2eints|float2roints|int2chars|str2ints|read|write|concat|strlen|getchar|setchar|type|label|jump|jumpifeq|jumpifneq|jumpifeqs|jumpifneqs|break|dprint)\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>
